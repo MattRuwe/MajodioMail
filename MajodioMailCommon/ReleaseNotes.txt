@@ -1,0 +1,5 @@
+This file contains the release notes for Majodio Mail.  For more details usage information, please refer to the production documentation.
+
+1.2.53.0 - 12/02/2006
+- Added functionality for accepting mail for any user and then dropping it into the undeliverable folder
+- Added configuration option for setting the server's DNS name which is sent by the SMTP client to remote servers in the EHLO or HELO commands

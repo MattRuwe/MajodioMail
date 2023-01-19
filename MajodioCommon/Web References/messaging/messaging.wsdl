@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:s0="http://messaging.majodio.com/messaging.asmx" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" targetNamespace="http://messaging.majodio.com/messaging.asmx" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://messaging.majodio.com/messaging.asmx">
+      <s:element name="Ping">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Product" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Version" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PingResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="InsertMessage">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MsgType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Msg" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertMessageResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="SendFeedback">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Product" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Message" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendFeedbackResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetNewDeliverableMessageIds">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Product" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Version" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="LatestMessageId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetNewDeliverableMessageIdsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetNewDeliverableMessageIdsResult" type="s0:ArrayOfInt" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfInt">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="int" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetDeliverableMessage">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="MessageId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDeliverableMessageResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDeliverableMessageResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ArrayOfInt" nillable="true" type="s0:ArrayOfInt" />
+      <s:element name="string" nillable="true" type="s:string" />
+    </s:schema>
+  </types>
+  <message name="PingSoapIn">
+    <part name="parameters" element="s0:Ping" />
+  </message>
+  <message name="PingSoapOut">
+    <part name="parameters" element="s0:PingResponse" />
+  </message>
+  <message name="InsertMessageSoapIn">
+    <part name="parameters" element="s0:InsertMessage" />
+  </message>
+  <message name="InsertMessageSoapOut">
+    <part name="parameters" element="s0:InsertMessageResponse" />
+  </message>
+  <message name="SendFeedbackSoapIn">
+    <part name="parameters" element="s0:SendFeedback" />
+  </message>
+  <message name="SendFeedbackSoapOut">
+    <part name="parameters" element="s0:SendFeedbackResponse" />
+  </message>
+  <message name="GetNewDeliverableMessageIdsSoapIn">
+    <part name="parameters" element="s0:GetNewDeliverableMessageIds" />
+  </message>
+  <message name="GetNewDeliverableMessageIdsSoapOut">
+    <part name="parameters" element="s0:GetNewDeliverableMessageIdsResponse" />
+  </message>
+  <message name="GetDeliverableMessageSoapIn">
+    <part name="parameters" element="s0:GetDeliverableMessage" />
+  </message>
+  <message name="GetDeliverableMessageSoapOut">
+    <part name="parameters" element="s0:GetDeliverableMessageResponse" />
+  </message>
+  <message name="PingHttpGetIn">
+    <part name="Product" type="s:string" />
+    <part name="Version" type="s:string" />
+  </message>
+  <message name="PingHttpGetOut" />
+  <message name="InsertMessageHttpGetIn">
+    <part name="MsgType" type="s:string" />
+    <part name="Msg" type="s:string" />
+  </message>
+  <message name="InsertMessageHttpGetOut" />
+  <message name="SendFeedbackHttpGetIn">
+    <part name="Product" type="s:string" />
+    <part name="Email" type="s:string" />
+    <part name="Name" type="s:string" />
+    <part name="Message" type="s:string" />
+  </message>
+  <message name="SendFeedbackHttpGetOut" />
+  <message name="GetNewDeliverableMessageIdsHttpGetIn">
+    <part name="Product" type="s:string" />
+    <part name="Version" type="s:string" />
+    <part name="LatestMessageId" type="s:string" />
+  </message>
+  <message name="GetNewDeliverableMessageIdsHttpGetOut">
+    <part name="Body" element="s0:ArrayOfInt" />
+  </message>
+  <message name="GetDeliverableMessageHttpGetIn">
+    <part name="MessageId" type="s:string" />
+  </message>
+  <message name="GetDeliverableMessageHttpGetOut">
+    <part name="Body" element="s0:string" />
+  </message>
+  <message name="PingHttpPostIn">
+    <part name="Product" type="s:string" />
+    <part name="Version" type="s:string" />
+  </message>
+  <message name="PingHttpPostOut" />
+  <message name="InsertMessageHttpPostIn">
+    <part name="MsgType" type="s:string" />
+    <part name="Msg" type="s:string" />
+  </message>
+  <message name="InsertMessageHttpPostOut" />
+  <message name="SendFeedbackHttpPostIn">
+    <part name="Product" type="s:string" />
+    <part name="Email" type="s:string" />
+    <part name="Name" type="s:string" />
+    <part name="Message" type="s:string" />
+  </message>
+  <message name="SendFeedbackHttpPostOut" />
+  <message name="GetNewDeliverableMessageIdsHttpPostIn">
+    <part name="Product" type="s:string" />
+    <part name="Version" type="s:string" />
+    <part name="LatestMessageId" type="s:string" />
+  </message>
+  <message name="GetNewDeliverableMessageIdsHttpPostOut">
+    <part name="Body" element="s0:ArrayOfInt" />
+  </message>
+  <message name="GetDeliverableMessageHttpPostIn">
+    <part name="MessageId" type="s:string" />
+  </message>
+  <message name="GetDeliverableMessageHttpPostOut">
+    <part name="Body" element="s0:string" />
+  </message>
+  <portType name="messagingSoap">
+    <operation name="Ping">
+      <input message="s0:PingSoapIn" />
+      <output message="s0:PingSoapOut" />
+    </operation>
+    <operation name="InsertMessage">
+      <input message="s0:InsertMessageSoapIn" />
+      <output message="s0:InsertMessageSoapOut" />
+    </operation>
+    <operation name="SendFeedback">
+      <input message="s0:SendFeedbackSoapIn" />
+      <output message="s0:SendFeedbackSoapOut" />
+    </operation>
+    <operation name="GetNewDeliverableMessageIds">
+      <input message="s0:GetNewDeliverableMessageIdsSoapIn" />
+      <output message="s0:GetNewDeliverableMessageIdsSoapOut" />
+    </operation>
+    <operation name="GetDeliverableMessage">
+      <input message="s0:GetDeliverableMessageSoapIn" />
+      <output message="s0:GetDeliverableMessageSoapOut" />
+    </operation>
+  </portType>
+  <portType name="messagingHttpGet">
+    <operation name="Ping">
+      <input message="s0:PingHttpGetIn" />
+      <output message="s0:PingHttpGetOut" />
+    </operation>
+    <operation name="InsertMessage">
+      <input message="s0:InsertMessageHttpGetIn" />
+      <output message="s0:InsertMessageHttpGetOut" />
+    </operation>
+    <operation name="SendFeedback">
+      <input message="s0:SendFeedbackHttpGetIn" />
+      <output message="s0:SendFeedbackHttpGetOut" />
+    </operation>
+    <operation name="GetNewDeliverableMessageIds">
+      <input message="s0:GetNewDeliverableMessageIdsHttpGetIn" />
+      <output message="s0:GetNewDeliverableMessageIdsHttpGetOut" />
+    </operation>
+    <operation name="GetDeliverableMessage">
+      <input message="s0:GetDeliverableMessageHttpGetIn" />
+      <output message="s0:GetDeliverableMessageHttpGetOut" />
+    </operation>
+  </portType>
+  <portType name="messagingHttpPost">
+    <operation name="Ping">
+      <input message="s0:PingHttpPostIn" />
+      <output message="s0:PingHttpPostOut" />
+    </operation>
+    <operation name="InsertMessage">
+      <input message="s0:InsertMessageHttpPostIn" />
+      <output message="s0:InsertMessageHttpPostOut" />
+    </operation>
+    <operation name="SendFeedback">
+      <input message="s0:SendFeedbackHttpPostIn" />
+      <output message="s0:SendFeedbackHttpPostOut" />
+    </operation>
+    <operation name="GetNewDeliverableMessageIds">
+      <input message="s0:GetNewDeliverableMessageIdsHttpPostIn" />
+      <output message="s0:GetNewDeliverableMessageIdsHttpPostOut" />
+    </operation>
+    <operation name="GetDeliverableMessage">
+      <input message="s0:GetDeliverableMessageHttpPostIn" />
+      <output message="s0:GetDeliverableMessageHttpPostOut" />
+    </operation>
+  </portType>
+  <binding name="messagingSoap" type="s0:messagingSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document" />
+    <operation name="Ping">
+      <soap:operation soapAction="http://messaging.majodio.com/messaging.asmx/Ping" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="InsertMessage">
+      <soap:operation soapAction="http://messaging.majodio.com/messaging.asmx/InsertMessage" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="SendFeedback">
+      <soap:operation soapAction="http://messaging.majodio.com/messaging.asmx/SendFeedback" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetNewDeliverableMessageIds">
+      <soap:operation soapAction="http://messaging.majodio.com/messaging.asmx/GetNewDeliverableMessageIds" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetDeliverableMessage">
+      <soap:operation soapAction="http://messaging.majodio.com/messaging.asmx/GetDeliverableMessage" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <binding name="messagingHttpGet" type="s0:messagingHttpGet">
+    <http:binding verb="GET" />
+    <operation name="Ping">
+      <http:operation location="/Ping" />
+      <input>
+        <http:urlEncoded />
+      </input>
+      <output />
+    </operation>
+    <operation name="InsertMessage">
+      <http:operation location="/InsertMessage" />
+      <input>
+        <http:urlEncoded />
+      </input>
+      <output />
+    </operation>
+    <operation name="SendFeedback">
+      <http:operation location="/SendFeedback" />
+      <input>
+        <http:urlEncoded />
+      </input>
+      <output />
+    </operation>
+    <operation name="GetNewDeliverableMessageIds">
+      <http:operation location="/GetNewDeliverableMessageIds" />
+      <input>
+        <http:urlEncoded />
+      </input>
+      <output>
+        <mime:mimeXml part="Body" />
+      </output>
+    </operation>
+    <operation name="GetDeliverableMessage">
+      <http:operation location="/GetDeliverableMessage" />
+      <input>
+        <http:urlEncoded />
+      </input>
+      <output>
+        <mime:mimeXml part="Body" />
+      </output>
+    </operation>
+  </binding>
+  <binding name="messagingHttpPost" type="s0:messagingHttpPost">
+    <http:binding verb="POST" />
+    <operation name="Ping">
+      <http:operation location="/Ping" />
+      <input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </input>
+      <output />
+    </operation>
+    <operation name="InsertMessage">
+      <http:operation location="/InsertMessage" />
+      <input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </input>
+      <output />
+    </operation>
+    <operation name="SendFeedback">
+      <http:operation location="/SendFeedback" />
+      <input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </input>
+      <output />
+    </operation>
+    <operation name="GetNewDeliverableMessageIds">
+      <http:operation location="/GetNewDeliverableMessageIds" />
+      <input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </input>
+      <output>
+        <mime:mimeXml part="Body" />
+      </output>
+    </operation>
+    <operation name="GetDeliverableMessage">
+      <http:operation location="/GetDeliverableMessage" />
+      <input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </input>
+      <output>
+        <mime:mimeXml part="Body" />
+      </output>
+    </operation>
+  </binding>
+  <service name="messaging">
+    <port name="messagingSoap" binding="s0:messagingSoap">
+      <soap:address location="http://messaging.majodio.com/messaging.asmx" />
+    </port>
+    <port name="messagingHttpGet" binding="s0:messagingHttpGet">
+      <http:address location="http://messaging.majodio.com/messaging.asmx" />
+    </port>
+    <port name="messagingHttpPost" binding="s0:messagingHttpPost">
+      <http:address location="http://messaging.majodio.com/messaging.asmx" />
+    </port>
+  </service>
+</definitions>

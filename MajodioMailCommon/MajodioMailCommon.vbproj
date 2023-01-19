@@ -1,0 +1,251 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="Current">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B858F266-0747-4906-BB90-05E5AB111178}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>MajodioMailCommon</AssemblyName>
+    <AssemblyOriginatorKeyFile>majodiokey.snk</AssemblyOriginatorKeyFile>
+    <AssemblyOriginatorKeyMode>None</AssemblyOriginatorKeyMode>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionStrict>Off</OptionStrict>
+    <RootNamespace>Majodio.Mail.Common</RootNamespace>
+    <StartupObject>Majodio.Mail.Common.%28None%29</StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <MyType>Windows</MyType>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <SignAssembly>true</SignAssembly>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <PublishUrl>http://localhost/MajodioMailCommon/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\release\</OutputPath>
+    <DocumentationFile>MajodioMailCommon.xml</DocumentationFile>
+    <BaseAddress>285212672</BaseAddress>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRIAL_VERSION=False</DefineConstants>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <DebugSymbols>true</DebugSymbols>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>1</WarningLevel>
+    <NoWarn>42016,42017,42018,42019,42032,42353,42354,42355</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\release\</OutputPath>
+    <DocumentationFile>MajodioMailCommon.xml</DocumentationFile>
+    <BaseAddress>285212672</BaseAddress>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRIAL_VERSION=False</DefineConstants>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <DebugSymbols>true</DebugSymbols>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>1</WarningLevel>
+    <NoWarn>42016,42017,42018,42019,42032,42353,42354,42355</NoWarn>
+    <DebugType>Full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Management" />
+    <Reference Include="System.Runtime.Remoting" />
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Code\Configuration\AliasDetails.vb" />
+    <Compile Include="Code\Configuration\BannedIp.vb" />
+    <Compile Include="Code\Configuration\BannedIpCollection.vb" />
+    <Compile Include="Code\Configuration\Config.vb" />
+    <Compile Include="Code\Configuration\RemoteConfigClient.vb" />
+    <Compile Include="Code\Configuration\Server.vb" />
+    <Compile Include="Code\Configuration\Dnsbl.vb" />
+    <Compile Include="Code\Configuration\DnsblCollection.vb" />
+    <Compile Include="Code\Configuration\DomainDetails.vb" />
+    <Compile Include="Code\Configuration\Domains.vb" />
+    <Compile Include="Code\Configuration\Pop3RelayDetails.vb" />
+    <Compile Include="Code\Configuration\RelayIp.vb" />
+    <Compile Include="Code\Configuration\RelayIpCollection.vb" />
+    <Compile Include="Code\Configuration\SpamAction.vb" />
+    <Compile Include="Code\Configuration\SpamRule.vb" />
+    <Compile Include="Code\Configuration\SpamRuleCollection.vb" />
+    <Compile Include="Code\Configuration\UserDetails.vb" />
+    <Compile Include="Code\DataTypes\MessageId.vb" />
+    <Compile Include="Code\DataTypes\UniqueId.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Code\Exceptions\ExceptionClient.vb" />
+    <Compile Include="Code\Exceptions\ExceptionItem.vb" />
+    <Compile Include="Code\Exceptions\ExceptionItemCollection.vb" />
+    <Compile Include="Code\Exceptions\MailException.vb" />
+    <Compile Include="Code\Exceptions\MessageNotFoundException.vb" />
+    <Compile Include="Code\Grouping\EmbeddedGroup.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Code\Grouping\EmbeddedGroupCollection.vb" />
+    <Compile Include="Code\Grouping\GroupMatches.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Code\Grouping\InvalidGroupException.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Code\Performance.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Code\Smtp\Response.vb" />
+    <Compile Include="Code\Storage\DocumentCache.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Code\Storage\DocumentCacheManagement.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Code\Storage\PersistantStorage2.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Code\Storage\PersistentStorage3.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Code\Storage\PersistentStorageChangedEventArgs.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Code\Storage\QueuedMail\Folder.vb" />
+    <Compile Include="Code\Storage\QueuedMail\FolderChangedEventArgs.vb" />
+    <Compile Include="Code\Storage\QueuedMail\FolderCollection.vb" />
+    <Compile Include="Code\Storage\QueuedMail\FolderNotFoundException.vb" />
+    <Compile Include="Code\Storage\QueuedMail\Message.vb" />
+    <Compile Include="Code\Storage\QueuedMail\MessageCollection.vb" />
+    <Compile Include="Code\Storage\QueuedMail\RemoteClient.vb" />
+    <Compile Include="Code\Storage\QueuedMail\Server.vb" />
+    <Compile Include="Code\Storage\QueuedMail\SystemWatcher.vb" />
+    <Compile Include="Code\Storage\xml.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Code\Registry.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Code\Constants.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Code\Functions.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Code\Grouping\GroupingType.vb" />
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="majodiokey.snk" />
+    <None Include="My Project\Settings.settings">
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ReleaseNotes.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MajodioCommon\MajodioCommon.vbproj">
+      <Project>{4F3B864A-532D-490C-841B-69BF28649766}</Project>
+      <Name>MajodioCommon</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

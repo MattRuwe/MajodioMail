@@ -1,0 +1,79 @@
+﻿<project schemaVersion="1.3.2.0">
+    <assemblies>
+        <assembly assemblyPath="C:\Development\Projects\MajodioMail\MajodioMail\MajodioMailApi\bin\release\Dns.dll" xmlCommentsPath="C:\Development\Projects\MajodioMail\MajodioMail\MajodioMailApi\bin\release\Dns.xml" commentsOnly="False" />
+        <assembly assemblyPath="C:\Development\Projects\MajodioMail\MajodioMail\MajodioMailApi\bin\release\MajodioCommon.dll" xmlCommentsPath="C:\Development\Projects\MajodioMail\MajodioMail\MajodioMailApi\bin\release\MajodioCommon.xml" commentsOnly="False" />
+        <assembly assemblyPath="C:\Development\Projects\MajodioMail\MajodioMail\MajodioMailApi\bin\release\MajodioMailApi.dll" xmlCommentsPath="C:\Development\Projects\MajodioMail\MajodioMail\MajodioMailApi\bin\release\MajodioMailApi.xml" commentsOnly="False" />
+        <assembly assemblyPath="C:\Development\Projects\MajodioMail\MajodioMail\MajodioMailApi\bin\release\MajodioMailCommon.dll" xmlCommentsPath="C:\Development\Projects\MajodioMail\MajodioMail\MajodioMailApi\bin\release\MajodioMailCommon.xml" commentsOnly="False" />
+        <assembly assemblyPath="C:\Development\Projects\MajodioMail\MajodioMail\MajodioMailApi\bin\release\MajodioMailMimeParser.dll" xmlCommentsPath="C:\Development\Projects\MajodioMail\MajodioMail\MajodioMailApi\bin\release\MajodioMailMimeParser.xml" commentsOnly="False" />
+        <assembly assemblyPath="C:\Development\Projects\MajodioMail\MajodioMail\MajodioMailApi\bin\release\MajodioMailPlugin.dll" xmlCommentsPath="C:\Development\Projects\MajodioMail\MajodioMail\MajodioMailApi\bin\release\MajodioMailPlugin.xml" commentsOnly="False" />
+        <assembly assemblyPath="C:\Development\Projects\MajodioMail\MajodioMail\MajodioMailApi\bin\release\MajodioMailServer.dll" xmlCommentsPath="C:\Development\Projects\MajodioMail\MajodioMail\MajodioMailApi\bin\release\MajodioMailServer.xml" commentsOnly="False" />
+    </assemblies>
+    <namespaceSummaries>
+        <namespaceSummaryItem name="" isDocumented="False" />
+        <namespaceSummaryItem name="Dns.Properties" isDocumented="False" />
+        <namespaceSummaryItem name="DnsLib" isDocumented="False" />
+        <namespaceSummaryItem name="Majodio" isDocumented="False" />
+        <namespaceSummaryItem name="Majodio.Common" isDocumented="False" />
+        <namespaceSummaryItem name="Majodio.Common.Assembly.Updater" isDocumented="False" />
+        <namespaceSummaryItem name="Majodio.Common.Messaging" isDocumented="False" />
+        <namespaceSummaryItem name="Majodio.Common.WmiMessaging" isDocumented="False" />
+        <namespaceSummaryItem name="Majodio.Data" isDocumented="False" />
+        <namespaceSummaryItem name="Majodio.Mail.Api" isDocumented="True" />
+        <namespaceSummaryItem name="Majodio.Mail.Api.My" isDocumented="False" />
+        <namespaceSummaryItem name="Majodio.Mail.Api.My.Resources" isDocumented="False" />
+        <namespaceSummaryItem name="Majodio.Mail.Api.RemoteAccess" isDocumented="False" />
+        <namespaceSummaryItem name="Majodio.Mail.Common" isDocumented="False" />
+        <namespaceSummaryItem name="Majodio.Mail.Common.Configuration" isDocumented="False" />
+        <namespaceSummaryItem name="Majodio.Mail.Common.DataTypes" isDocumented="False" />
+        <namespaceSummaryItem name="Majodio.Mail.Common.Exceptions" isDocumented="False" />
+        <namespaceSummaryItem name="Majodio.Mail.Common.Grouping" isDocumented="False" />
+        <namespaceSummaryItem name="Majodio.Mail.Common.My" isDocumented="False" />
+        <namespaceSummaryItem name="Majodio.Mail.Common.Smtp" isDocumented="False" />
+        <namespaceSummaryItem name="Majodio.Mail.Common.Storage" isDocumented="False" />
+        <namespaceSummaryItem name="Majodio.Mail.Common.Storage.QueuedMail" isDocumented="False" />
+        <namespaceSummaryItem name="Majodio.Mail.Mime" isDocumented="True" />
+        <namespaceSummaryItem name="Majodio.Mail.Mime.Headers" isDocumented="True" />
+        <namespaceSummaryItem name="Majodio.Mail.Mime.My" isDocumented="False" />
+        <namespaceSummaryItem name="Majodio.Mail.Plugin" isDocumented="True" />
+        <namespaceSummaryItem name="Majodio.Mail.Plugin.My" isDocumented="False" />
+        <namespaceSummaryItem name="Majodio.Mail.Plugin.My.Resources" isDocumented="False" />
+        <namespaceSummaryItem name="Majodio.Mail.Server" isDocumented="False" />
+        <namespaceSummaryItem name="Majodio.Mail.Server.Imap4" isDocumented="False" />
+        <namespaceSummaryItem name="Majodio.Mail.Server.Log" isDocumented="False" />
+        <namespaceSummaryItem name="Majodio.Mail.Server.My" isDocumented="False" />
+        <namespaceSummaryItem name="Majodio.Mail.Server.Pop3" isDocumented="False" />
+        <namespaceSummaryItem name="Majodio.Mail.Server.Smtp" isDocumented="False" />
+        <namespaceSummaryItem name="Majodio.Mail.Server.Tcp" isDocumented="False" />
+        <namespaceSummaryItem name="Majodio.Web.Mail" isDocumented="False" />
+        <namespaceSummaryItem name="Majodio.Web.UI.Design" isDocumented="False" />
+        <namespaceSummaryItem name="Majodio.Web.UI.WebControls" isDocumented="False" />
+        <namespaceSummaryItem name="My" isDocumented="False" />
+    </namespaceSummaries>
+    <contentPlacement>AboveNamespaces</contentPlacement>
+    <projectSummary />
+    <sandcastlePath />
+    <hhcPath />
+    <hxcompPath />
+    <outputPath>.\Help\</outputPath>
+    <helpFileFormat>Website</helpFileFormat>
+    <cleanIntermediates>True</cleanIntermediates>
+    <purgeDuplicateTopics>False</purgeDuplicateTopics>
+    <frameworkVersion>2.0.50727</frameworkVersion>
+    <binaryTOC>True</binaryTOC>
+    <includeFavorites>False</includeFavorites>
+    <preliminary>False</preliminary>
+    <rootNSContainer>True</rootNSContainer>
+    <helpTitle>Majodio Mail Programmer's Reference</helpTitle>
+    <htmlHelpName>Readme</htmlHelpName>
+    <language>en-US</language>
+    <copyrightHref>http://www.majodio.com</copyrightHref>
+    <copyrightText>Copyright 2006 Majodio Software</copyrightText>
+    <feedbackEMailAddress>support@majodio.com</feedbackEMailAddress>
+    <headerText>Majodio Mail Programmer's Reference</headerText>
+    <projectLinks>Local</projectLinks>
+    <sdkLinks>Msdn</sdkLinks>
+    <presentationStyle>Prototype</presentationStyle>
+    <namingMethod>Guid</namingMethod>
+    <missingTags>Summary, Parameter, Returns, AutoDocumentCtors</missingTags>
+    <visibleItems>InheritedMembers, InheritedFrameworkMembers, Protected, SealedProtected</visibleItems>
+</project>

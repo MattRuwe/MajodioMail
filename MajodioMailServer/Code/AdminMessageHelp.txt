@@ -1,0 +1,114 @@
+               ********************************************
+               ** Majodio Mail Email Administration Help **
+               ********************************************
+
+Thank you for using Majodio Mail.  The email administation system is a very 
+powerful feature.  Please find a detailed description of how to use the 
+system below.
+
+
+Remarks:  
+    All commands have the implied parameter AdminPassword which contains
+    the password used to issue commands and is case sensitive.  This 
+    password is set in the Majodio Mail User Interface.
+
+    The MIME content-type of the message should be text/plain.  To
+    configure your e-mail application to send text/plain messages refer
+    to any help provided by the manufacturer.  When the command email is
+    first received, the MIME message is searched for a content-type of
+    TEXT/PLAIN.  If no body parts are found with this content-type, the 
+    email will be rejected.
+
+    Once the command has been processed, the mail server will send a 
+    message back to the sender account to inform the sender if the 
+    command was successful or failed.  If the command failed, the message 
+    will contain details of why the failure occurred.
+       
+Command Syntax:  
+    <Command Name>:<Command Value>
+        
+    Example:
+        AdminPassword:Password
+    Remarks:         
+        Spaces before and after the command value are ignored.
+
+------------------------------------------------------------------------------
+
+Commands:
+-----
+AddAccount: Adds a new email account to the specified domain
+    Parameters:
+        EmailAddress - The email address for the new user.  If the username
+                       already exists within the specified domain or if the
+                       domain does not exist on this server, an error occurs
+        EmailPassword - The password for the new email account.
+-----
+DeleteAccount: Removes an account from the specified domain
+    Parameter:
+        EmailAddress - The email address for the user to remove.  If the 
+                       account does not exist an error occurs
+-----
+ChangePassword: Changes the password for a specified user
+    Parameters:
+        EmailAddress - The email address for the user to who is to have their
+                       password changed
+        NewPassword - The new password for the user account.
+-----
+AddAlias: Adds an alias
+    Parameters:
+        AliasEmailAddress - The new email address that is to be the alias
+        DestinationEmailAddress - The email address where the AliasEmailAddrss
+                                  is to be redirected to
+        IsRegEx - Specifies whether or not the portion of AliasEmailAddress before
+                  the '@' sign is a regular expression (general false)
+-----
+DeleteAlias: Deletes an alias and all destination e-mail addresses
+    Parameter:
+        AliasEmailAddress - The alias address to delete (e.g. user@email.com).
+-----
+DeleteAliasRealAddress: Deletes a real address associated with an alias e-mail
+                        address
+    Parameters:
+        AliasEmailAddress - The alias email address that the real email address
+                            is associated with
+        RealEmailAddress - The real email address that is to be deleted.
+        
+------------------------------------------------------------------------------
+Examples:
+
+ Adding an e-mail account
+ ***********************************************************
+ * To: admin@email.com                                     *
+ * From: user@email.com                                    *
+ * Subject: AddAccount                                     *
+ *                                                         *
+ * AdminPassword:Password                                  *
+ * EmailAddress:bob@domain.com                             *
+ * EmailPassword:Password                                  *
+ ***********************************************************
+
+ Adding an alias account with a destination
+ ***********************************************************
+ * To: admin@email.com                                     *
+ * From: user@email.com                                    *
+ * Subject: AddAlias                                       *
+ *                                                         *
+ * AdminPassword:Password                                  *
+ * AliasEmailAddress:alias@email.com                       *
+ * DestinationEmailAddress:destination@domain.com          *
+ * IsRegex:False                                           *
+ ***********************************************************
+ 
+ Add a destination account to an existing alias
+ (this example assumes that the previous example
+ was already executed)
+ ***********************************************************
+ * To: admin@email.com                                     *
+ * From: user@email.com                                    *
+ * Subject: AddAlias                                       *
+ *                                                         *
+ * AdminPassword:Password                                  *
+ * AliasEmailAddress:alias@email.com                       *
+ * DestinationEmailAddress:destination2@domain.com         *
+ * IsRegex:False                                           *
+ *********************************************************** 

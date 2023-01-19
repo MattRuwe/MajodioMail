@@ -1,0 +1,210 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="Current">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4F3B864A-532D-490C-841B-69BF28649766}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>MajodioCommon</AssemblyName>
+    <AssemblyOriginatorKeyFile>majodiokey.snk</AssemblyOriginatorKeyFile>
+    <AssemblyOriginatorKeyMode>None</AssemblyOriginatorKeyMode>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionStrict>Off</OptionStrict>
+    <RootNamespace>
+    </RootNamespace>
+    <StartupObject>
+    </StartupObject>
+    <WebReference_EnableProperties>true</WebReference_EnableProperties>
+    <WebReference_EnableSQLTypes>false</WebReference_EnableSQLTypes>
+    <WebReference_EnableLegacyEventingModel>true</WebReference_EnableLegacyEventingModel>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <MyType>Windows</MyType>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <SignAssembly>true</SignAssembly>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <OldToolsVersion>3.5</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\debug</OutputPath>
+    <DocumentationFile>MajodioCommon.xml</DocumentationFile>
+    <BaseAddress>285212672</BaseAddress>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>
+    </DefineConstants>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <DebugSymbols>true</DebugSymbols>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>1</WarningLevel>
+    <NoWarn>42016,42017,42018,42019,42032,42353,42354,42355</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\release\</OutputPath>
+    <DocumentationFile>MajodioCommon.xml</DocumentationFile>
+    <BaseAddress>285212672</BaseAddress>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>
+    </DefineConstants>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <DebugSymbols>true</DebugSymbols>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>1</WarningLevel>
+    <NoWarn>42016,42017,42018,42019,42032,42353,42354,42355</NoWarn>
+    <DebugType>Full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Design" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web">
+      <Name>System.Web</Name>
+    </Reference>
+    <Reference Include="System.Web.Services">
+      <Name>System.Web.Services</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Classes\Class1.vb" />
+    <Compile Include="Classes\Conifguration.vb" />
+    <Compile Include="Classes\DataAccess.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Classes\DataParameter.vb" />
+    <Compile Include="Classes\DataParameterCollection.vb" />
+    <Compile Include="Classes\DbType.vb" />
+    <Compile Include="Classes\Email.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Classes\EmailAddress.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Classes\EmailAddressCollection.vb" />
+    <Compile Include="Classes\EmailStringFormat.vb" />
+    <Compile Include="Classes\Exception.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Classes\FileUtilities.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Classes\Functions.vb" />
+    <Compile Include="Classes\Messaging.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Classes\Registry.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Classes\Schedule\DailySchedule.vb" />
+    <Compile Include="Classes\Schedule\MonthlySchedule.vb" />
+    <Compile Include="Classes\Schedule\OnceSchedule.vb" />
+    <Compile Include="Classes\Schedule\ScheduleEvent.vb" />
+    <Compile Include="Classes\Schedule\ScheduleTimer.vb" />
+    <Compile Include="Classes\Schedule\WeeklySchedule.vb" />
+    <Compile Include="Classes\SharedMutex.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Classes\Timer.vb" />
+    <Compile Include="Classes\Updater\AppUpdate.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Classes\Updater\Resource.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Classes\Utilities.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Classes\WebControls\PayPalBuyNowButton.vb" />
+    <Compile Include="Classes\WmiMessaging\GenericWmiMessagingEvent.vb" />
+    <Compile Include="Classes\WmiMessaging\GenericWmiMessagingEventArgs.vb" />
+    <Compile Include="Classes\WmiMessaging\WmiMessagingEventArgsBase.vb" />
+    <Compile Include="Classes\WmiMessaging\WmiMessagingEventBase.vb" />
+    <Compile Include="Classes\WmiMessaging\WmiMessagingEventInstaller.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Classes\WmiMessaging\WmiMessagingEventListner.vb" />
+    <Compile Include="Modules\Constants.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Modules\Debug.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Modules\Functions.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Web References\messaging\Reference.vb">
+      <DependentUpon>Reference.map</DependentUpon>
+      <SubType>code</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <None Include="majodiokey.snk" />
+    <None Include="Web References\messaging\messaging.disco" />
+    <None Include="Web References\messaging\messaging.wsdl" />
+    <None Include="Web References\messaging\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+    <WebReferenceUrl Include="http://messaging.majodio.com/messaging.asmx">
+      <RelPath>Web References\messaging\</RelPath>
+      <UrlBehavior>Static</UrlBehavior>
+    </WebReferenceUrl>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="My Project\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>
